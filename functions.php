@@ -1,6 +1,6 @@
 <?php
 /**
- * Genesis Sample.
+ * Genesis Sample FR.
  *
  * This file adds functions to the Genesis Sample Theme.
  *
@@ -13,10 +13,6 @@
 // Starts the engine.
 require_once get_template_directory() . '/lib/init.php';
 
-// Defines constants to help enqueue scripts and styles.
-define( 'CHILD_THEME_HANDLE', sanitize_title_with_dashes( wp_get_theme()->get( 'Name' ) ) );
-define( 'CHILD_THEME_VERSION', wp_get_theme()->get( 'Version' ) );
-
 // Sets up the Theme.
 require_once get_stylesheet_directory() . '/lib/theme-defaults.php';
 
@@ -28,7 +24,7 @@ add_action( 'after_setup_theme', 'genesis_sample_localization_setup' );
  */
 function genesis_sample_localization_setup() {
 
-	load_child_theme_textdomain( 'genesis-sample', get_stylesheet_directory() . '/languages' );
+	load_child_theme_textdomain( genesis_get_theme_handle(), get_stylesheet_directory() . '/languages' );
 
 }
 
@@ -60,6 +56,11 @@ function genesis_child_gutenberg_support() { // phpcs:ignore WordPress.NamingCon
 	require_once get_stylesheet_directory() . '/lib/gutenberg/init.php';
 }
 
+// Registers the responsive menus.
+if ( function_exists( 'genesis_register_responsive_menus' ) ) {
+	genesis_register_responsive_menus( genesis_get_config( 'responsive-menus' ) );
+}
+
 add_action( 'wp_enqueue_scripts', 'genesis_sample_enqueue_scripts_styles' );
 /**
  * Enqueues scripts and styles.
@@ -68,75 +69,45 @@ add_action( 'wp_enqueue_scripts', 'genesis_sample_enqueue_scripts_styles' );
  */
 function genesis_sample_enqueue_scripts_styles() {
 
+	$appearance = genesis_get_config( 'appearance' );
+
 	wp_enqueue_style(
-		'genesis-sample-fonts',
-		'//fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,700',
+		genesis_get_theme_handle() . '-fonts',
+		$appearance['fonts-url'],
 		array(),
-		CHILD_THEME_VERSION
+		genesis_get_theme_version()
 	);
 
 	wp_enqueue_style( 'dashicons' );
 
-	$suffix = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '.min';
-	wp_enqueue_script(
-		'genesis-sample-responsive-menu',
-		get_stylesheet_directory_uri() . "/js/responsive-menus{$suffix}.js",
-		array( 'jquery' ),
-		CHILD_THEME_VERSION,
-		true
-	);
-
-	wp_localize_script(
-		'genesis-sample-responsive-menu',
-		'genesis_responsive_menu',
-		genesis_sample_responsive_menu_settings()
-	);
-
-	wp_enqueue_script(
-		'genesis-sample',
-		get_stylesheet_directory_uri() . '/js/genesis-sample.js',
-		array( 'jquery' ),
-		CHILD_THEME_VERSION,
-		true
-	);
+	if ( genesis_is_amp() ) {
+		wp_enqueue_style(
+			genesis_get_theme_handle() . '-amp',
+			get_stylesheet_directory_uri() . '/lib/amp/amp.css',
+			array( genesis_get_theme_handle() ),
+			genesis_get_theme_version()
+		);
+	}
 
 }
 
+add_action( 'after_setup_theme', 'genesis_sample_theme_support', 9 );
 /**
- * Defines responsive menu settings.
+ * Add desired theme supports.
  *
- * @since 2.3.0
+ * See config file at `config/theme-supports.php`.
+ *
+ * @since 3.0.0
  */
-function genesis_sample_responsive_menu_settings() {
+function genesis_sample_theme_support() {
 
-	$settings = array(
-		'mainMenu'         => __( 'Menu', 'genesis-sample' ),
-		'menuIconClass'    => 'dashicons-before dashicons-menu',
-		'subMenu'          => __( 'Submenu', 'genesis-sample' ),
-		'subMenuIconClass' => 'dashicons-before dashicons-arrow-down-alt2',
-		'menuClasses'      => array(
-			'combine' => array(
-				'.nav-primary',
-			),
-			'others'  => array(),
-		),
-	);
+	$theme_supports = genesis_get_config( 'theme-supports' );
 
-	return $settings;
+	foreach ( $theme_supports as $feature => $args ) {
+		add_theme_support( $feature, $args );
+	}
 
 }
-
-// Adds support for HTML5 markup structure.
-add_theme_support( 'html5', genesis_get_config( 'html5' ) );
-
-// Adds support for accessibility.
-add_theme_support( 'genesis-accessibility', genesis_get_config( 'accessibility' ) );
-
-// Adds viewport meta tag for mobile browsers.
-add_theme_support( 'genesis-responsive-viewport' );
-
-// Adds custom logo in Customizer > Site Identity.
-add_theme_support( 'custom-logo', genesis_get_config( 'custom-logo' ) );
 
 add_filter( 'genesis_seo_title', 'genesis_sample_header_title', 10, 3 );
 /**
@@ -162,17 +133,8 @@ function genesis_sample_header_title( $title, $inside, $wrap ) {
 
 }
 
-// Renames primary and secondary navigation menus.
-add_theme_support( 'genesis-menus', genesis_get_config( 'menus' ) );
-
 // Adds image sizes.
 add_image_size( 'sidebar-featured', 75, 75, true );
-
-// Adds support for after entry widget.
-add_theme_support( 'genesis-after-entry-widget-area' );
-
-// Adds support for 3-column footer widgets.
-add_theme_support( 'genesis-footer-widgets', 3 );
 
 // Removes header right widget area.
 unregister_sidebar( 'header-right' );
@@ -184,25 +146,6 @@ unregister_sidebar( 'sidebar-alt' );
 genesis_unregister_layout( 'content-sidebar-sidebar' );
 genesis_unregister_layout( 'sidebar-content-sidebar' );
 genesis_unregister_layout( 'sidebar-sidebar-content' );
-
-// Removes output of primary navigation right extras.
-remove_filter( 'genesis_nav_items', 'genesis_nav_right', 10, 2 );
-remove_filter( 'wp_nav_menu_items', 'genesis_nav_right', 10, 2 );
-
-add_action( 'genesis_theme_settings_metaboxes', 'genesis_sample_remove_metaboxes' );
-/**
- * Removes output of unused admin settings metaboxes.
- *
- * @since 2.6.0
- *
- * @param string $_genesis_admin_settings The admin screen to remove meta boxes from.
- */
-function genesis_sample_remove_metaboxes( $_genesis_admin_settings ) {
-
-	remove_meta_box( 'genesis-theme-settings-header', $_genesis_admin_settings, 'main' );
-	remove_meta_box( 'genesis-theme-settings-nav', $_genesis_admin_settings, 'main' );
-
-}
 
 add_filter( 'genesis_customizer_theme_settings_config', 'genesis_sample_remove_customizer_settings' );
 /**
@@ -283,18 +226,21 @@ function genesis_sample_comments_gravatar( $args ) {
 
 }
 
-//* Beginning of Custom Edits
+// ====================================================== Beginning of Custom Edits
+
 //* Modify the length of post excerpts
 add_filter( 'excerpt_length', 'sp_excerpt_length' );
 function sp_excerpt_length( $length ) {
 	return 38; // pull first 38 words
 }
 
-// Enqueue Ionicons from ionicons.com
-add_action( 'wp_enqueue_scripts', 'sp_enqueue_ionicons' );
-function sp_enqueue_ionicons() {
-	wp_enqueue_style( 'ionicons', '//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css', array(), CHILD_THEME_VERSION );
+// Enqueue Ionicons from ionicons.com if needed
+
+// Get rid of tags on posts. (https://ryanbenhase.com/remove-tags-categories-or-any-taxonomy/)
+function ryanbenhase_unregister_tags() {
+    unregister_taxonomy_for_object_type( 'post_tag', 'post' );
 }
+add_action( 'init', 'ryanbenhase_unregister_tags' );
 
 // Adds support for 3-column footer widgets.
 add_theme_support( 'genesis-footer-widgets', 3 );
@@ -302,8 +248,40 @@ add_theme_support( 'genesis-footer-widgets', 3 );
 // Change the footer text
 add_filter('genesis_footer_creds_text', 'sp_footer_creds_filter');
 function sp_footer_creds_filter( $creds ) {
-	$creds = 'Copyright [footer_copyright] Six Peak Capital | All Rights Reserved | Privacy & Terms<br />Made in Seattle by Measured Digital';
+	$creds = 'Copyright [footer_copyright] ___Name___ &middot; All Rights Reserved<br />Made in Seattle by <a href="https://www.measuredux.com/">Measured Digital</a>';
 	return $creds;
 }
 
-remove_action( 'genesis_after_post_content', 'genesis_post_meta' );
+// Add featured image on single post
+add_action( 'genesis_entry_content', 'themeprefix_featured_image', 1 );
+function themeprefix_featured_image() {
+	$image = genesis_get_image( array( // more options here -> genesis/lib/functions/image.php
+			'format'  => 'html',
+			'size'    => 'large',// add in your image size large, medium or thumbnail - for custom see the post
+			'context' => '',
+			'attr'    => array ( 'class' => 'aligncenter' ), // set a default WP image class
+		) );
+	if ( is_singular()) {
+		if ( $image ) {
+			printf( '<div class="featured-image-class">%s</div>', $image ); // wraps the featured image in a div with css class you can control
+		}
+	}
+}
+
+// Add Google Tag Manager code in <head>
+add_action( 'wp_head', 'sk_google_tag_manager1' );
+function sk_google_tag_manager1() { ?>
+	<!-- Google Tag Manager -->
+
+	<!-- End Google Tag Manager -->
+	<!-- <meta name="google-site-verification" content="vwos7LJ7IahS3wMxYTQYJOUENChXPvRXibS6hJ6d2d8" /> -->
+<?php }
+
+// Add Google Tag Manager second part code immediately below opening <body> tag
+add_action( 'genesis_before', 'sk_google_tag_manager2' );
+function sk_google_tag_manager2() { ?>
+	<!-- Google Tag Manager (noscript) -->
+
+	<!-- End Google Tag Manager (noscript) -->
+<?php }
+

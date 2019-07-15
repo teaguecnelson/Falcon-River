@@ -1,0 +1,30 @@
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul {
+  font-family: arcon;
+  color: $text-color;
+}
+
+a {
+  color: $text-color;
+  text-decoration: none;
+}
+
+.widget-title {
+  font-weight: 400;
+  font-size: 24px;
+}
+
+// Decorations
+.underline {
+  text-decoration: underline;
+}
+
+.highlight {
+  background-color: #ffd849;
+}

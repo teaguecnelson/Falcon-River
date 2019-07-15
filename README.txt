@@ -1,20 +1,31 @@
-# Genesis Sample Theme
+## Overview
+This Genesis Child Theme Was Adopted From The Genesis Sample Theme: https://github.com/studiopress/genesis-sample/.
+Browser Compatibility Checked on: Chrome version 74.0.3729.169 & Safari version 12.1.
 
-GitHub project link: https://github.com/studiopress/genesis-sample/.
+
+## Git & Git Ignore
+Git is used on this project, and there is a .gitignore file that contains exemptions for the node-packages.
 
 
-## Installation Instructions
+## Functions.php
+Functions.php contains all the structural changes to the theme as well as a code snippet to install Google Tag Manager.
+Google Analytics has been installed through Google Tag Manager.
 
-1. Upload the Genesis Sample theme folder via FTP to your wp-content/themes/ directory. (The Genesis parent theme needs to be in the wp-content/themes/ directory as well.)
-2. Go to your WordPress dashboard and select Appearance.
-3. Activate the Genesis Sample theme.
-4. Inside your WordPress dashboard, go to Genesis > Theme Settings and configure them to your liking.
 
-## Theme Support
+## Styling
+Styling is done with Sass using Node-Sass (an NPM Package from NPM version v10.16.0). 
+There’s a watch script in package.json to give somewhat hot reloading when the styles.scss file is saved.
 
-Please visit https://my.studiopress.com/help/ for theme support.
+To run Node-Sass, use command “npm run scss“ in the root folder of the theme.
+Sass is organized into Components (Common, Atoms, Molecules, Organisms and Pages). 
 
-## For Developers
+
+## Code Quality, Formatting & Linting
+Sass files were formatted with Visual Studio plugin Prettier Code formatter. 
+Linting was done with ___________________.
+
+
+################################ For Developers
 
 The version of [Genesis Sample on GitHub](https://github.com/studiopress/genesis-sample/) includes tooling to check code against WordPress standards. To use it:
 
@@ -24,6 +35,8 @@ The version of [Genesis Sample on GitHub](https://github.com/studiopress/genesis
 4. Type `composer phpcs` to run coding standards checks.
 
 You'll see output highlighting issues with PHP files that do not conform to Genesis Sample coding standards.
+
+Run `composer phpcbf` if you see “phpcbf can fix the x marked sniff violations automatically” in the output of `composer phpcs`.
 
 ### npm scripts
 

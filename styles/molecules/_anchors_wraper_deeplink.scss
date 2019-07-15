@@ -1,0 +1,13 @@
+/* Blogger2wp.com - adjust anchor landing for fixed header */
+.anchor-wrapper a {
+  position: absolute;
+  left: 0px;
+  top: -130px;
+}
+.anchor-wrapper {
+  position: relative;
+}
+
+.no-margin {
+  margin: 0;
+}

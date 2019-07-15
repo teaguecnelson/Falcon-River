@@ -1,0 +1,28 @@
+.jumbo {
+  height: 75vh;
+  background-image: linear-gradient(
+      to left,
+      rgba(0, 0, 0, 0.1),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url("http://falconriver.wpengine.com/wp-content/uploads/2019/05/apartment-decors-design-700549.jp");
+  /* 	background-image: url('http://falconriv.local/wp-content/uploads/2019/05/Screen-Shot-2019-05-09-at-11.15.49-AM.pn'); */
+  background-color: #081b33;
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+.jumbo-inner {
+  width: 75%;
+  margin: 0 auto;
+}
+
+@media only screen and (min-width: 960px) {
+  .jumbo h1 {
+    color: #fff;
+    font-size: 2.5rem;
+    font-weight: bold;
+    width: 60%;
+  }
+}

@@ -1,0 +1,24 @@
+.footer-widgets {
+  padding: 30px 0;
+  margin-bottom: 0;
+  background-color: $footer-bg-color;
+  color: $footer-txt-color;
+}
+
+.footer-widgets h3 {
+  color: #fff;
+}
+
+.footer-widgets p {
+  font-size: 16px;
+  font-weight: thin;
+}
+
+.site-footer {
+  background-color: $footer-bg-color;
+  border-top: none;
+}
+
+.site-footer p {
+  color: $footer-txt-color;
+}
