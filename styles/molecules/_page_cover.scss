@@ -1,0 +1,79 @@
+.page-cover {
+  //   height: 30vh;
+  //   background-image: linear-gradient(
+  //       to left,
+  //       rgba(0, 0, 0, 0.1),
+  //       rgba(0, 0, 0, 0.5)
+  //     ),
+  //     url("http://falconriver.wpengine.com/wp-content/uploads/2019/05/apartment-decors-design-700549.jp");
+  /* 	background-image: url('http://falconriv.local/wp-content/uploads/2019/05/Screen-Shot-2019-05-09-at-11.15.49-AM.pn'); */
+  background-color: #081b33;
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+.page-cover-wide {
+  padding: 0 30px;
+
+  // @media only screen and (min-width: 960px) {
+  //   //   margin: 0 auto 0 5rem;
+  //   width: 75%;
+  //   margin: auto;
+  //   // margin: 0 180px;
+  //   // max-width: calc(100% + 360px);
+  //   // width: auto;
+  // }
+  // @media only screen and (min-width: 1190px) {
+  //   //   margin: 0 auto 0 5rem;
+  //   // width: 75%;
+  //   // margin: auto;
+  //   margin: 0 180px;
+  //   max-width: calc(100% + 360px);
+  //   width: auto;
+  // }
+  @media only screen and (min-width: 1190px) {
+    margin-left: -180px;
+    margin-right: -180px;
+    max-width: calc(100% + 360px);
+    width: auto;
+  }
+}
+
+.page-cover-inner {
+  @media only screen and (min-width: 960px) {
+    width: 60%;
+  }
+}
+
+@media only screen and (min-width: 960px) {
+  .page-cover h1 {
+    color: #fff;
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+}
+
+.page-cover-wrapper {
+  @media only screen and (min-width: 960px) {
+    width: 60%;
+  }
+}
+
+.page-cover-color h1,
+.page-cover-color p,
+.page-cover-color a {
+  color: #fff;
+}
+
+.site-inner {
+  padding-top: 0 !important;
+}
+
+.page .entry-header {
+  padding: 3rem 0;
+}
+
+.page .entry-title {
+  margin-bottom: 0;
+}

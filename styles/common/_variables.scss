@@ -1,4 +1,20 @@
 $text-color: #333333;
+$neutral-grey: #f2f2f2;
+$dark-grey: #cecece;
+
+$page-cover-color: #081b33;
 
 $footer-bg-color: #3b3b3a;
-$footer-txt-color: #868686;
+$footer-txt-color: #bbbbbb;
+
+.neutral-grey {
+  background-color: $neutral-grey;
+}
+
+.dark-grey {
+  background-color: $dark-grey;
+}
+
+.page-cover-color {
+  background-color: $page-cover-color;
+}

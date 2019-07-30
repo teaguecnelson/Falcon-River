@@ -248,25 +248,25 @@ add_theme_support( 'genesis-footer-widgets', 3 );
 // Change the footer text
 add_filter('genesis_footer_creds_text', 'sp_footer_creds_filter');
 function sp_footer_creds_filter( $creds ) {
-	$creds = 'Copyright [footer_copyright] ___Name___ &middot; All Rights Reserved<br />Made in Seattle by <a href="https://www.measuredux.com/">Measured Digital</a>';
+	$creds = 'Copyright [footer_copyright] Falcon River LLC &middot; All Rights Reserved<br />Made in Seattle by <a href="https://www.measuredux.com/">Measured Digital</a>';
 	return $creds;
 }
 
 // Add featured image on single post
-add_action( 'genesis_entry_content', 'themeprefix_featured_image', 1 );
-function themeprefix_featured_image() {
-	$image = genesis_get_image( array( // more options here -> genesis/lib/functions/image.php
-			'format'  => 'html',
-			'size'    => 'large',// add in your image size large, medium or thumbnail - for custom see the post
-			'context' => '',
-			'attr'    => array ( 'class' => 'aligncenter' ), // set a default WP image class
-		) );
-	if ( is_singular()) {
-		if ( $image ) {
-			printf( '<div class="featured-image-class">%s</div>', $image ); // wraps the featured image in a div with css class you can control
-		}
-	}
-}
+// add_action( 'genesis_entry_content', 'themeprefix_featured_image', 1 );
+// function themeprefix_featured_image() {
+// 	$image = genesis_get_image( array( // more options here -> genesis/lib/functions/image.php
+// 			'format'  => 'html',
+// 			'size'    => 'large',// add in your image size large, medium or thumbnail - for custom see the post
+// 			'context' => '',
+// 			'attr'    => array ( 'class' => 'aligncenter' ), // set a default WP image class
+// 		) );
+// 	if ( is_singular()) {
+// 		if ( $image ) {
+// 			printf( '<div class="featured-image-class">%s</div>', $image ); // wraps the featured image in a div with css class you can control
+// 		}
+// 	}
+// }
 
 // Add Google Tag Manager code in <head>
 add_action( 'wp_head', 'sk_google_tag_manager1' );
@@ -284,4 +284,3 @@ function sk_google_tag_manager2() { ?>
 
 	<!-- End Google Tag Manager (noscript) -->
 <?php }
-

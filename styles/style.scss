@@ -25,6 +25,8 @@ Text Domain: genesis-sample
 
 /** atoms */
 @import "atoms/text";
+@import "atoms/pullquote";
+@import "atoms/floated_img";
 
 /** Molecules */
 @import "molecules/site_header";
@@ -32,7 +34,10 @@ Text Domain: genesis-sample
 @import "molecules/jumbo_cover";
 @import "molecules/full_width_section";
 @import "molecules/anchors_wraper_deeplink";
+@import "molecules/page_cover";
 
 /** Organisms */
 
 /** Pages */
+@import "pages/homepage";
+@import "pages/standard_page";
