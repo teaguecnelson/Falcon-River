@@ -4,7 +4,7 @@
  *
  * A template to...
  *
- * Template Name: Standard Page
+ * Template Name: How-works
  *
  * @package Genesis Sample
  * @author  StudioPress
@@ -30,7 +30,7 @@ function sk_do_page_title_before() {
 // Add custom closing div for page title
 add_action( 'genesis_after_header', 'sk_do_page_title_after' );
 function sk_do_page_title_after() {
-	echo 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore.
+	echo 'As a specialized online deal flow sourcing partner, we’ve gotten pretty good at listening to your criteria, identifying candidates that fit, and bringing buyers and sellers together. Here’s how we we do it.
 
 	</div></div></div></div></div></div>';
 }

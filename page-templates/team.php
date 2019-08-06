@@ -4,7 +4,7 @@
  *
  * A template to...
  *
- * Template Name: Standard Page
+ * Template Name: Team
  *
  * @package Genesis Sample
  * @author  StudioPress
@@ -30,7 +30,7 @@ function sk_do_page_title_before() {
 // Add custom closing div for page title
 add_action( 'genesis_after_header', 'sk_do_page_title_after' );
 function sk_do_page_title_after() {
-	echo 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore.
+	echo 'Having gone through the acquisition and sales process as online business owners ourselves many times, we realized there was a great need for an off-market deal flow service. So we built one.
 
 	</div></div></div></div></div></div>';
 }

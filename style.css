@@ -1561,13 +1561,16 @@ p.entry-meta {
     page-break-before: avoid; } }
 
 .neutral-grey {
-  background-color: #f2f2f2; }
+  background-color: #e0ddd9; }
 
 .dark-grey {
   background-color: #cecece; }
 
 .page-cover-color {
-  background-color: #081b33; }
+  background-color: #dbbea1; }
+
+.white {
+  background-color: #fff; }
 
 @font-face {
   font-family: "arcon";
@@ -1691,7 +1694,7 @@ a {
   margin-top: 15px; }
 
 .jumbo {
-  height: 75vh;
+  height: 60vh;
   background-image: linear-gradient(to left, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)), url("http://falconriv.local/wp-content/uploads/2019/07/carlos-muza-hpjSkU2UYSU-unsplash.jpg");
   /* 	background-image: url('http://falconriv.local/wp-content/uploads/2019/05/Screen-Shot-2019-05-09-at-11.15.49-AM.pn'); */
   background-color: #081b33;
@@ -1716,7 +1719,7 @@ a {
 @media only screen and (min-width: 960px) {
   .wide-width-wrapper {
     padding: 5%;
-    background-color: #f2f2f2; } }
+    background-color: #e0ddd9; } }
 
 @media only screen and (min-width: 960px) {
   .wide-width-inner {
@@ -1800,7 +1803,7 @@ a {
   margin-bottom: 0; }
 
 .pattern-back {
-  background-image: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("http://falconriv.local/wp-content/uploads/2019/07/Group-7-e1564469260958.png");
+  background-image: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("http://falconriv.local/wp-content/uploads/2019/08/Blocks-S-01.png");
   /* 	background-image: url('http://falconriv.local/wp-content/uploads/2019/05/Screen-Shot-2019-05-09-at-11.15.49-AM.pn'); */
   background-color: #081b33;
   background-position: center;
@@ -1818,7 +1821,7 @@ a {
     color: white; }
 
 .pattern-back-inv {
-  background-image: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("http://falconriv.local/wp-content/uploads/2019/07/Group-7-1-e1564463987646.png");
+  background-image: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("http://falconriv.local/wp-content/uploads/2019/08/Blocks-S-2.png");
   /* 	background-image: url('http://falconriv.local/wp-content/uploads/2019/05/Screen-Shot-2019-05-09-at-11.15.49-AM.pn'); */
   background-color: #081b33;
   background-position: center;
@@ -1834,17 +1837,47 @@ a {
   .pattern-back-inv .wp-block-button a {
     color: white; }
 
+.white-bg-patt {
+  background-image: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("http://falconriv.local/wp-content/uploads/2019/07/bg-1-e1564514431788.png");
+  /* 	background-image: url('http://falconriv.local/wp-content/uploads/2019/05/Screen-Shot-2019-05-09-at-11.15.49-AM.pn'); */
+  background-color: #081b33;
+  background-position: center;
+  /* Center the image */
+  background-repeat: no-repeat;
+  /* Do not repeat the image */
+  background-size: cover;
+  /* Resize the background image to cover the entire container */ }
+
 .wp-block-atomic-blocks-ab-columns {
   background-color: transparent !important; }
 
 .home {
   background-color: #fafafa; }
-  .home .footer-widgets {
-    border-top: 15px solid #bbbbbb; }
 
-.page-template-standardPage .entry-header {
+.home .footer-widgets,
+.page-id-73 .footer-widgets {
+  border-top: 15px solid #bbbbbb; }
+
+.buyer-solution .wp-block-media-text__media {
+  padding: 3rem; }
+
+.page-cover-color h1,
+.page-cover-color p,
+.page-cover-color a {
+  color: #333333; }
+
+.about-us-sec {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); }
+
+.page-template-standardPage .entry-header,
+.page-template-contact .entry-header,
+.page-template-buy .entry-header,
+.page-template-sell .entry-header,
+.page-template-how-works .entry-header,
+.page-template-team .entry-header,
+.page-template-our-story .entry-header {
   height: 75vh;
-  background-image: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("http://falconriv.local/wp-content/uploads/2019/07/Group-7-1-e1564463987646.png");
+  background-image: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("http://falconriv.local/wp-content/uploads/2019/08/Blcoks-wide.png");
   /* 	background-image: url('http://falconriv.local/wp-content/uploads/2019/05/Screen-Shot-2019-05-09-at-11.15.49-AM.pn'); */
   background-color: #ebe844;
   background-position: center;
@@ -1854,24 +1887,91 @@ a {
   background-size: cover;
   /* Resize the background image to cover the entire container */
   width: 100%;
-  padding: 4rem 0 3rem; }
+  padding: 2rem 0; }
   @media only screen and (min-width: 960px) {
-    .page-template-standardPage .entry-header {
+    .page-template-standardPage .entry-header,
+    .page-template-contact .entry-header,
+    .page-template-buy .entry-header,
+    .page-template-sell .entry-header,
+    .page-template-how-works .entry-header,
+    .page-template-team .entry-header,
+    .page-template-our-story .entry-header {
       margin-left: auto;
       max-height: 400px; } }
 
-.page-template-standardPage .my-entry-title {
+.page-template-standardPage .my-entry-title,
+.page-template-contact .my-entry-title,
+.page-template-buy .my-entry-title,
+.page-template-sell .my-entry-title,
+.page-template-how-works .my-entry-title,
+.page-template-team .my-entry-title,
+.page-template-our-story .my-entry-title {
   background-color: transparent;
   color: white;
   max-width: 500px;
   padding: 3rem !important;
   border-radius: 5px 5px 5px 5px; }
 
-.page-template-standardPage .my-entry-title h1 {
+.page-template-standardPage .my-entry-title h1,
+.page-template-contact .my-entry-title h1,
+.page-template-buy .my-entry-title h1,
+.page-template-sell .my-entry-title h1,
+.page-template-how-works .my-entry-title h1,
+.page-template-team .my-entry-title h1,
+.page-template-our-story .my-entry-title h1 {
   color: white; }
 
-.page-template-standardPage .entry-title {
+.page-template-standardPage .entry-title,
+.page-template-contact .entry-title,
+.page-template-buy .entry-title,
+.page-template-sell .entry-title,
+.page-template-how-works .entry-title,
+.page-template-team .entry-title,
+.page-template-our-story .entry-title {
   padding: 0 0 1rem; }
 
-.page-template-standardPage .wp-block-media-text {
+.page-template-standardPage .wp-block-media-text,
+.page-template-contact .wp-block-media-text,
+.page-template-buy .wp-block-media-text,
+.page-template-sell .wp-block-media-text,
+.page-template-how-works .wp-block-media-text,
+.page-template-team .wp-block-media-text,
+.page-template-our-story .wp-block-media-text {
   padding: 0 38px; }
+
+.blog .big-wrapper {
+  height: 75vh;
+  background-image: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("http://falconriv.local/wp-content/uploads/2019/08/Blcoks-wide.png");
+  /* 	background-image: url('http://falconriv.local/wp-content/uploads/2019/05/Screen-Shot-2019-05-09-at-11.15.49-AM.pn'); */
+  background-color: #ebe844;
+  background-position: center;
+  /* Center the image */
+  background-repeat: no-repeat;
+  /* Do not repeat the image */
+  background-size: cover;
+  /* Resize the background image to cover the entire container */
+  padding: 2rem 0; }
+  @media only screen and (min-width: 960px) {
+    .blog .big-wrapper {
+      margin-left: auto;
+      max-height: 400px; } }
+
+.blog .my-entry-title {
+  background-color: transparent;
+  color: white;
+  max-width: 500px;
+  padding: 3rem !important;
+  border-radius: 5px 5px 5px 5px; }
+
+.blog .my-entry-title h1 {
+  color: white; }
+
+.blog .archive-title {
+  padding: 0 0 1rem;
+  font-size: 30px; }
+
+.blog .wp-block-media-text {
+  padding: 0 38px; }
+
+.single-post .site-inner {
+  padding: 60px 30px 0 !important; }

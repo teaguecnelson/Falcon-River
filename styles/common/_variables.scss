@@ -1,8 +1,10 @@
 $text-color: #333333;
-$neutral-grey: #f2f2f2;
+// $neutral-grey: #fafafa;
+$neutral-grey: #e0ddd9;
+
 $dark-grey: #cecece;
 
-$page-cover-color: #081b33;
+$page-cover-color: #dbbea1;
 
 $footer-bg-color: #3b3b3a;
 $footer-txt-color: #bbbbbb;
@@ -17,4 +19,8 @@ $footer-txt-color: #bbbbbb;
 
 .page-cover-color {
   background-color: $page-cover-color;
+}
+
+.white {
+  background-color: #fff;
 }

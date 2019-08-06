@@ -17,7 +17,7 @@
 .pattern-back {
   // height: 75vh;
   background-image: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
-    url("http://falconriv.local/wp-content/uploads/2019/07/Group-7-e1564469260958.png");
+    url("http://falconriv.local/wp-content/uploads/2019/08/Blocks-S-01.png");
   /* 	background-image: url('http://falconriv.local/wp-content/uploads/2019/05/Screen-Shot-2019-05-09-at-11.15.49-AM.pn'); */
   background-color: #081b33;
   background-position: center; /* Center the image */
@@ -37,7 +37,7 @@
 .pattern-back-inv {
   // height: 75vh;
   background-image: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
-    url("http://falconriv.local/wp-content/uploads/2019/07/Group-7-1-e1564463987646.png");
+    url("http://falconriv.local/wp-content/uploads/2019/08/Blocks-S-2.png");
   /* 	background-image: url('http://falconriv.local/wp-content/uploads/2019/05/Screen-Shot-2019-05-09-at-11.15.49-AM.pn'); */
   background-color: #081b33;
   background-position: center; /* Center the image */
@@ -53,17 +53,17 @@
   }
 }
 
-// .white-bg-patt {
-//   // height: 75vh;
-//   background-image: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
-//     url("http://falconriv.local/wp-content/uploads/2019/07/bg-e1564466320627.png");
-//   /* 	background-image: url('http://falconriv.local/wp-content/uploads/2019/05/Screen-Shot-2019-05-09-at-11.15.49-AM.pn'); */
-//   background-color: #081b33;
-//   background-position: center; /* Center the image */
-//   background-repeat: no-repeat; /* Do not repeat the image */
-//   background-size: cover; /* Resize the background image to cover the entire container */
-//   color: white;
-// }
+.white-bg-patt {
+  // height: 75vh;
+  background-image: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
+    url("http://falconriv.local/wp-content/uploads/2019/07/bg-1-e1564514431788.png");
+  /* 	background-image: url('http://falconriv.local/wp-content/uploads/2019/05/Screen-Shot-2019-05-09-at-11.15.49-AM.pn'); */
+  background-color: #081b33;
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+  // color: white;
+}
 
 .wp-block-atomic-blocks-ab-columns {
   background-color: transparent !important;
@@ -72,8 +72,23 @@
 .home {
   background-color: #fafafa;
   // background-color: #faf0ca;
+}
 
-  .footer-widgets {
-    border-top: 15px solid $footer-txt-color;
-  }
+.home .footer-widgets,
+.page-id-73 .footer-widgets {
+  border-top: 15px solid $footer-txt-color;
+}
+
+.buyer-solution .wp-block-media-text__media {
+  padding: 3rem;
+}
+
+.page-cover-color h1,
+.page-cover-color p,
+.page-cover-color a {
+  color: $text-color;
+}
+
+.about-us-sec {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }

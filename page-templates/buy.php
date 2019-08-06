@@ -4,7 +4,7 @@
  *
  * A template to...
  *
- * Template Name: Standard Page
+ * Template Name: Buy
  *
  * @package Genesis Sample
  * @author  StudioPress
@@ -30,7 +30,7 @@ function sk_do_page_title_before() {
 // Add custom closing div for page title
 add_action( 'genesis_after_header', 'sk_do_page_title_after' );
 function sk_do_page_title_after() {
-	echo 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore.
+	echo 'You might have a pretty good idea of what you are out to buy. Or maybe you don\'t, but you\'ve done enough deals (in web properties or other assets) to know that a box model and off market targeting is the way to go when sourcing your deal flow.
 
 	</div></div></div></div></div></div>';
 }
