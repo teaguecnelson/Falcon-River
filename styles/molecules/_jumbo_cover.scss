@@ -1,11 +1,11 @@
 .jumbo {
-  height: 60vh;
+  height: 75vh;
   background-image: linear-gradient(
       to left,
       rgba(0, 0, 0, 0.1),
       rgba(0, 0, 0, 0.5)
     ),
-    url("http://falconriv.local/wp-content/uploads/2019/07/carlos-muza-hpjSkU2UYSU-unsplash.jpg");
+    url("http://falconriv.local/wp-content/uploads/2019/07/carlos-muza-hpjSkU2UYSU-unsplash-e1564460909671.jpg");
   /* 	background-image: url('http://falconriv.local/wp-content/uploads/2019/05/Screen-Shot-2019-05-09-at-11.15.49-AM.pn'); */
   background-color: #081b33;
   background-position: center; /* Center the image */
@@ -24,6 +24,11 @@
     color: #fff;
     font-size: 2.5rem;
     font-weight: bold;
+    width: 60%;
+  }
+
+  .jumbo p {
+    color: #fff;
     width: 60%;
   }
 }

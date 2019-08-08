@@ -1597,7 +1597,8 @@ h5,
 h6 {
   font-family: "arcon", sans-serif;
   color: #333333;
-  font-weight: bold; }
+  font-weight: bold;
+  margin: 0 0 10px; }
 
 h2,
 h3,
@@ -1625,6 +1626,24 @@ a {
 
 .hr-dark {
   border-top: 1px solid #333333 !important; }
+
+.highlight-block-color {
+  height: 4px;
+  width: 15%;
+  background-color: #fe7255;
+  margin: 0 auto 2rem 0; }
+
+.highlight-block-white {
+  height: 4px;
+  width: 15%;
+  background-color: white;
+  margin: 0 auto 2rem 0; }
+
+.home .highlight-block-color {
+  margin: 0 auto 2rem; }
+
+.home .highlight-block-white {
+  margin: 0 auto 2rem; }
 
 .small-padding {
   padding-top: 1rem !important;
@@ -1694,8 +1713,8 @@ a {
   margin-top: 15px; }
 
 .jumbo {
-  height: 60vh;
-  background-image: linear-gradient(to left, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)), url("http://falconriv.local/wp-content/uploads/2019/07/carlos-muza-hpjSkU2UYSU-unsplash.jpg");
+  height: 75vh;
+  background-image: linear-gradient(to left, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)), url("http://falconriv.local/wp-content/uploads/2019/07/carlos-muza-hpjSkU2UYSU-unsplash-e1564460909671.jpg");
   /* 	background-image: url('http://falconriv.local/wp-content/uploads/2019/05/Screen-Shot-2019-05-09-at-11.15.49-AM.pn'); */
   background-color: #081b33;
   background-position: center;
@@ -1714,6 +1733,9 @@ a {
     color: #fff;
     font-size: 2.5rem;
     font-weight: bold;
+    width: 60%; }
+  .jumbo p {
+    color: #fff;
     width: 60%; } }
 
 @media only screen and (min-width: 960px) {
@@ -1803,7 +1825,7 @@ a {
   margin-bottom: 0; }
 
 .pattern-back {
-  background-image: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("http://falconriv.local/wp-content/uploads/2019/08/Blocks-S-01.png");
+  background-image: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("http://falconriv.local/wp-content/uploads/2019/08/Topoo.png");
   /* 	background-image: url('http://falconriv.local/wp-content/uploads/2019/05/Screen-Shot-2019-05-09-at-11.15.49-AM.pn'); */
   background-color: #081b33;
   background-position: center;
@@ -1821,7 +1843,7 @@ a {
     color: white; }
 
 .pattern-back-inv {
-  background-image: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("http://falconriv.local/wp-content/uploads/2019/08/Blocks-S-2.png");
+  background-image: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("http://falconriv.local/wp-content/uploads/2019/08/Topo2.png");
   /* 	background-image: url('http://falconriv.local/wp-content/uploads/2019/05/Screen-Shot-2019-05-09-at-11.15.49-AM.pn'); */
   background-color: #081b33;
   background-position: center;
@@ -1876,8 +1898,7 @@ a {
 .page-template-how-works .entry-header,
 .page-template-team .entry-header,
 .page-template-our-story .entry-header {
-  height: 75vh;
-  background-image: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("http://falconriv.local/wp-content/uploads/2019/08/Blcoks-wide.png");
+  background-image: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("http://falconriv.local/wp-content/uploads/2019/08/Page-Topt.png");
   /* 	background-image: url('http://falconriv.local/wp-content/uploads/2019/05/Screen-Shot-2019-05-09-at-11.15.49-AM.pn'); */
   background-color: #ebe844;
   background-position: center;
@@ -1887,7 +1908,7 @@ a {
   background-size: cover;
   /* Resize the background image to cover the entire container */
   width: 100%;
-  padding: 2rem 0; }
+  padding: 1.5rem 0 2rem; }
   @media only screen and (min-width: 960px) {
     .page-template-standardPage .entry-header,
     .page-template-contact .entry-header,
@@ -1940,8 +1961,7 @@ a {
   padding: 0 38px; }
 
 .blog .big-wrapper {
-  height: 75vh;
-  background-image: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("http://falconriv.local/wp-content/uploads/2019/08/Blcoks-wide.png");
+  background-image: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("http://falconriv.local/wp-content/uploads/2019/08/Page-Topt.png");
   /* 	background-image: url('http://falconriv.local/wp-content/uploads/2019/05/Screen-Shot-2019-05-09-at-11.15.49-AM.pn'); */
   background-color: #ebe844;
   background-position: center;
@@ -1950,7 +1970,7 @@ a {
   /* Do not repeat the image */
   background-size: cover;
   /* Resize the background image to cover the entire container */
-  padding: 2rem 0; }
+  padding: 1.5rem 0 2rem; }
   @media only screen and (min-width: 960px) {
     .blog .big-wrapper {
       margin-left: auto;
@@ -1975,3 +1995,6 @@ a {
 
 .single-post .site-inner {
   padding: 60px 30px 0 !important; }
+
+.entry-time {
+  display: none; }

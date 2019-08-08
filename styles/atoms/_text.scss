@@ -5,9 +5,23 @@ h4,
 h5,
 h6 {
   font-family: "arcon", sans-serif;
+  // color: #01346f;
   color: $text-color;
   font-weight: bold;
+  margin: 0 0 10px;
 }
+
+// h2 {
+//   color: $brand-blue;
+//   // color: $text-color;
+//   // color: $brand-orange;
+// }
+
+// h3 {
+//   color: $brand-blue;
+//   // color: $brand-orange;
+//   // color: $text-color;
+// }
 
 h2,
 h3,
@@ -43,4 +57,28 @@ a {
 
 .hr-dark {
   border-top: 1px solid $text-color !important;
+}
+
+.highlight-block-color {
+  height: 4px;
+  width: 15%;
+  background-color: $brand-orange;
+  margin: 0 auto 2rem 0;
+}
+
+.highlight-block-white {
+  height: 4px;
+  width: 15%;
+  background-color: white;
+  margin: 0 auto 2rem 0;
+}
+
+.home {
+  .highlight-block-color {
+    margin: 0 auto 2rem;
+  }
+
+  .highlight-block-white {
+    margin: 0 auto 2rem;
+  }
 }
