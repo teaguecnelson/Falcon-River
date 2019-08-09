@@ -271,18 +271,22 @@ function sp_footer_creds_filter( $creds ) {
 // Add custom opening div for Blog page title
 add_action( 'genesis_archive_title_descriptions', 'sk_do_blog_title_before', 7 );
 function sk_do_blog_title_before() {
-	if(is_home() ) {
+	if(is_home() || is_archive() ) {
 	echo '<div class="alignfull big-wrapper"><div class="site-inner"><div class="content-sidebar-wrap"><div class="content"><div class="wp-block-media-text alignwide has-media-on-the-right is-stacked-on-mobile"><div class="wp-block-media-text__content my-entry-title">';
 }}
 
 // Add custom closing div for Blog page title
 add_action( 'genesis_archive_title_descriptions', 'sk_do_blog_title_after' );
 function sk_do_blog_title_after() {
-	if(is_home() ) {
+	if(is_home() || is_archive() ) {
 	echo 'Learn about aquiring, selling or operating websites as online businesses or assets.
 
 	</div></div></div></div></div></div>';
 }}
+
+// Removes Meta From Entry Footer
+remove_action( 'genesis_entry_footer', 'genesis_post_meta' );
+
 
 // Add Google Tag Manager code in <head>
 add_action( 'wp_head', 'sk_google_tag_manager1' );

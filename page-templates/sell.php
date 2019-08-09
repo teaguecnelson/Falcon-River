@@ -30,7 +30,7 @@ function sk_do_page_title_before() {
 // Add custom closing div for page title
 add_action( 'genesis_after_header', 'sk_do_page_title_after' );
 function sk_do_page_title_after() {
-	echo 'Many online business owners have spent a long time building their business, but don’t know that there is a market of potential buyers wanting to buy and operate online businesses.
+	echo 'Learn About Selling Your Business.
 
 	</div></div></div></div></div></div>';
 }

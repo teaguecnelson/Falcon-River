@@ -15,20 +15,34 @@
 }
 
 .jumbo-inner {
-  width: 75%;
-  margin: 0 auto;
-}
-
-@media only screen and (min-width: 960px) {
-  .jumbo h1 {
-    color: #fff;
-    font-size: 2.5rem;
-    font-weight: bold;
-    width: 60%;
+  padding: 0 15px;
+  @media only screen and (min-width: 960px) {
+    width: 73%;
+    margin: 0 auto;
+    padding: 0;
   }
 
-  .jumbo p {
+  h1,
+  p {
     color: #fff;
-    width: 60%;
+  }
+
+  @media only screen and (min-width: 960px) {
+    h1 {
+      font-size: 2.5rem;
+      font-weight: bold;
+      width: 60%;
+    }
+
+    p {
+      line-height: 1.5rem;
+      width: 60%;
+    }
+  }
+}
+
+.jumbo-top {
+  @media only screen and (min-width: 960px) {
+    height: 100px;
   }
 }

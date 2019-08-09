@@ -1,13 +1,15 @@
-.column-padding {
-  padding: 25px;
-}
+@media only screen and (min-width: 960px) {
+  .column-padding {
+    padding: 25px;
+  }
 
-.column-padding-desc {
-  padding: 0 25px 25px;
-}
+  .column-padding-desc {
+    padding: 0 25px 25px;
+  }
 
-.column-padding-sides {
-  padding: 0 25px;
+  .column-padding-sides {
+    padding: 0 25px;
+  }
 }
 
 .how-icons figure {
@@ -77,18 +79,4 @@
 .home .footer-widgets,
 .page-id-73 .footer-widgets {
   border-top: 15px solid $footer-txt-color;
-}
-
-.buyer-solution .wp-block-media-text__media {
-  padding: 3rem;
-}
-
-.page-cover-color h1,
-.page-cover-color p,
-.page-cover-color a {
-  color: $text-color;
-}
-
-.about-us-sec {
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }

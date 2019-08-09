@@ -1,0 +1,16 @@
+.is-stacked-on-mobile {
+  @media only screen and (max-width: 960px) {
+    padding: 0 !important;
+  }
+}
+
+.buyer-solution .wp-block-media-text__media {
+  padding: 3rem;
+}
+
+.wp-block-media-text__content {
+  padding: 0 !important;
+  @media only screen and (min-width: 960px) {
+    padding: 0 8%;
+  }
+}

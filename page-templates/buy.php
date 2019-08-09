@@ -30,7 +30,7 @@ function sk_do_page_title_before() {
 // Add custom closing div for page title
 add_action( 'genesis_after_header', 'sk_do_page_title_after' );
 function sk_do_page_title_after() {
-	echo 'You might have a pretty good idea of what you are out to buy. Or maybe you don\'t, but you\'ve done enough deals (in web properties or other assets) to know that a box model and off market targeting is the way to go when sourcing your deal flow.
+	echo 'For those who believe in box models and getting what they want.
 
 	</div></div></div></div></div></div>';
 }

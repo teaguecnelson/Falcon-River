@@ -1,3 +1,15 @@
 .genesis-nav-menu .current-menu-item > a {
   color: $text-color;
 }
+
+@media only screen and (max-width: 410px) {
+  .wp-custom-logo .site-container .title-area {
+    max-width: 220px !important;
+  }
+}
+
+.site-header {
+  @media only screen and (max-width: 410px) {
+    padding: 0 15px;
+  }
+}

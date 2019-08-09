@@ -30,7 +30,7 @@ function sk_do_page_title_before() {
 // Add custom closing div for page title
 add_action( 'genesis_after_header', 'sk_do_page_title_after' );
 function sk_do_page_title_after() {
-	echo 'We would love to hear from you. Set up a time to talk or ask us a question.
+	echo 'Set up a time to talk or ask us a question.
 
 	</div></div></div></div></div></div>';
 }
