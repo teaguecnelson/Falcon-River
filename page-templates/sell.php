@@ -30,7 +30,8 @@ function sk_do_page_title_before() {
 // Add custom closing div for page title
 add_action( 'genesis_after_header', 'sk_do_page_title_after' );
 function sk_do_page_title_after() {
-	echo 'Learn About Selling Your Business.
+	echo 'Selling your business through Falcon River is a simple and fast process. Our clients know exactly what they want, have cash on hand, and have an excellent history for closing deals at a fair value.
+
 
 	</div></div></div></div></div></div>';
 }

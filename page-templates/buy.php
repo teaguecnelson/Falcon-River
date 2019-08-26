@@ -30,7 +30,8 @@ function sk_do_page_title_before() {
 // Add custom closing div for page title
 add_action( 'genesis_after_header', 'sk_do_page_title_after' );
 function sk_do_page_title_after() {
-	echo 'For those who believe in box models and getting what they want.
+	echo 'Waiting for the right business to appear on a marketplace is time consuming and frustrating. It\'s never exactly what you want.  That’s why successful investment firms source private deals. 
+
 
 	</div></div></div></div></div></div>';
 }
